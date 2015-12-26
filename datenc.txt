@@ -1,0 +1,28 @@
+#Rechteck: (1/k)
+#Oberwelle Amplitude/mV
+1 637.2
+3 212.4
+5 127.4
+7 91.03
+9 70.8
+
+#Sägezahn: (1/k)
+#Oberwelle Amplitude/mV
+1 627.2
+2 318.6
+3 212.4
+4 159.3
+5 127.4
+6 106.2
+7 91.03
+8 79.65
+9 70.8
+10 63.7
+
+#Dreieck: (1/k^2)
+#Oberwelle Amplitude/mV
+1 633.5
+3 70.4
+5 25.3
+7 12.9
+9 7.8
