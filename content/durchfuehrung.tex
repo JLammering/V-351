@@ -1,2 +1,189 @@
  \section{Durchführung}
 \label{sec:Durchführung}
+
+\subsection{Vorbereitung}
+\label{sec:Vorbereitung}
+
+Für die periodischen Funktionen werden nun jeweils die Intervalle der ersten
+Periode angegeben. Es gilt dann
+
+\begin{equation}
+  f(x) = f(x+2\pi n).
+\end{equation}
+Über die Formeln \eqref{eqn:anbn} werden
+die Koeffizienten der jeweiligen Fourierreihe und ihre k-Anhängigkeit bestimmt.
+
+\subsubsection{Rechteckspannung}
+
+Eine Rechteckspannung wird beschrieben durch
+
+\begin{equation}
+  f_r(t) =
+  \begin{cases}
+    -1, & -\pi \geq t < 0 \\
+    +1, & 0 \leq t > \pi
+  \end{cases}.
+\end{equation}
+Daraus ergibt sich
+
+\begin{equation}
+  a_{k,r} = 0
+\end{equation}
+und
+
+\begin{equation}
+  b_{k,r} = -\frac{1}{n\pi}
+\end{equation}
+Das führt zu den k-Abhängigkeiten
+
+\begin{equation}
+  u_r(k) = 0
+\end{equation}
+für gerade k's und
+
+\begin{equation}
+  u_r(k) = \frac{1}{k}
+\end{equation}
+für ungerade k's.
+
+\subsubsection{Sägezahnspannung}
+
+Eine Sägezahnspannung wird beschrieben durch
+
+\begin{equation}
+  f_s(t) =
+  \begin{cases}
+    t + \pi, & -\pi \geq t < 0 \\
+    t - \pi, & 0 \leq t > \pi
+  \end{cases}.
+\end{equation}
+Daraus ergibt sich
+
+\begin{equation}
+  a_{k,s} = 0
+\end{equation}
+und
+
+\begin{equation}
+  b_{k,s} = -\frac{2}{n\pi}
+\end{equation}
+Das führt zu den k-Abhängigkeiten
+
+\begin{equation}
+  u_s(k) = 0
+\end{equation}
+für gerade k's und
+
+\begin{equation}
+  u_s(k) = \frac{1}{k}
+\end{equation}
+für ungerade k's.
+
+\subsubsection{Dreieckspannung}
+
+Eine Dreieckspannung wird beschrieben durch
+
+\begin{equation}
+  f_d(t) =
+  \begin{cases}
+    \pi + t, & -\pi \geq t < 0 \\
+    \pi - t, & 0 \leq t > \pi
+  \end{cases}.
+\end{equation}
+Daraus ergibt sich
+
+\begin{equation}
+  a_{k,d} =
+\end{equation}
+und
+
+\begin{equation}
+  b_{k,d} =
+\end{equation}
+Das führt zu den k-Abhängigkeiten
+
+\begin{equation}
+  u_d(k) =
+\end{equation}
+für gerade k's und
+
+\begin{equation}
+  u_d(k) =
+\end{equation}
+für ungerade k's.
+
+\subsection{Aufbau}
+
+\subsubsection{Fourieranalyse}
+\label{sec:AufbauA}
+
+Für die Fourieranalyse wird ein Funktionsgenerator mit einem Oszilloskop
+in Reihe geschaltet. Das Oszilloskop wird so eingestellt, dass das
+Frequenzspektrum der benutzen Schwingung anzeigt.
+Am Funktionsgenerator sollte eine möglichst hohe Grundfrequenz eingestellt
+werden, damit die Abweichungen gering bleiben.
+
+\subsubsection{Fouriersynthese}
+\label{sec:AufbauS}
+
+Bei der Fouriersynthese wird zur Einstellung der Amplitude ein
+Signalgenerator mit einem Frequenzmessgerät parallel geschaltet. Zur Einstellung
+der konstanten Phasenverschiebung von $\pi$ oder 0 wird das Frequenzmessgerät
+mit dem Oszilloskop in Reihe geschaltet.
+Um Lissajous-Figuren abzulesen muss der Oszillograph auf XY-Betrieb geschaltet
+werden.
+
+
+\subsection{Messvorgang}
+
+\subsubsection{Fourieranalyse}
+
+\begin{itemize}
+
+  \item Zunächst wird die in \ref{sec:AufbauA} beschriebene Schaltung aufgebaut.
+
+  \item Am Oszilloskop werden die ersten neun Frequenzpeaks aufgenommen.
+  Um herauszufinden, ob es sich bei den kleineren Peaks um
+  Nebenmaxima anstatt um eine gesuchte Eigenfrequenz handelt, kann der
+  konstante Abstand zwischen den einzelnen Peaks ausgenutzt werden.
+  Es werden Messwerte für eine Rechteck-, Dreieck- und Sägezahnspannung
+  aufgenommen.
+
+\end{itemize}
+
+\subsubsection{Fouriersynthese}
+
+Es werden die Graphen für eine Rechteck-, Dreieck- und Sägezahnspannung
+aufgenommen. Dabei wird wie folgt vorgegangen:
+
+\begin{itemize}
+
+  \item Zunächst wird die in \ref{sec:AufbauS} beschriebene Schaltung zur
+  Einstellung der Amplitude augebaut.
+
+  \item Es wird am ersten Anschluss die maximale Amplitude eingestellt und
+  abgelesen. Aus dem Messwert werden über die jeweilige k-Abhängigkeit aus
+  \ref{sec:Vorbereitung} der
+  Schwingung, die erzeugt werden soll, die Werte für $k=1,2,...,9$ berechnet.
+
+  \item Nun wird die Amplitude des k-ten Anschluss' auf den berechneten k-ten
+  Wert gesetzt.
+
+  \item Es wird die in \ref{sec:AufbauS} beschriebene Schaltung zur Einstellung
+  der Phasenverschiebung aufgebaut.
+
+  \item Nun wird der k-te Anschluss mit dem ersten Anschluss eingeschaltet.
+  Die Phasenverschiebung wird so verändert, dass bei ungeraden k's eine
+  Lissajousfigur, die keine Fläche einschließt, und bei geraden k's
+  eine Lissajousfigur, die symmetrisch zur x-Achse ist, erkennbar ist.
+
+  \item Zuletzt wird das Oszilloskop zurückgesetzt und alle Anschlüsse
+  eingeschaltet, sodass die jeweilige zu erzeugende Schwingung auf dem
+  Bildschirm zu sehen ist.
+
+  \item Es sollte darauf geachtet werden, dass immer nur die benötigten
+  Schwingungen angeschlossen sind. Falls für bestimmte k's die berechnete
+  Amplitude Null ist, kann der jeweilige Anschluss für alle Einstellungen
+  vernachlässigt werden.
+
+\end{itemize}
