@@ -11,7 +11,8 @@ Periode angegeben. Es gilt dann
   f(x) = f(x+2\pi n).
 \end{equation}
 Über die Formeln \eqref{eqn:anbn} werden
-die Koeffizienten der jeweiligen Fourierreihe und ihre k-Anhängigkeit bestimmt.
+die Koeffizienten der jeweiligen Fourierreihe und ihre gesuchte
+k-Anhängigkeit bestimmt.
 
 \subsubsection{Rechteckspannung}
 
@@ -20,21 +21,11 @@ Eine Rechteckspannung wird beschrieben durch
 \begin{equation}
   f_r(t) =
   \begin{cases}
-    -1, & -\pi \geq t < 0 \\
-    +1, & 0 \leq t > \pi
+    -1, & -\pi \leq t < 0 \\
+    +1, & 0 \leq t < \pi
   \end{cases}.
 \end{equation}
-Daraus ergibt sich
-
-\begin{equation}
-  a_{k,r} = 0
-\end{equation}
-und
-
-\begin{equation}
-  b_{k,r} = -\frac{1}{n\pi}
-\end{equation}
-Das führt zu den k-Abhängigkeiten
+Daraus ergeben sich die k-Abhängigkeiten
 
 \begin{equation}
   u_r(k) = 0
@@ -50,34 +41,15 @@ für ungerade k's.
 
 Eine Sägezahnspannung wird beschrieben durch
 
-\begin{equation}
-  f_s(t) =
-  \begin{cases}
-    t + \pi, & -\pi \geq t < 0 \\
-    t - \pi, & 0 \leq t > \pi
-  \end{cases}.
-\end{equation}
-Daraus ergibt sich
-
-\begin{equation}
-  a_{k,s} = 0
-\end{equation}
-und
-
-\begin{equation}
-  b_{k,s} = -\frac{2}{n\pi}
-\end{equation}
-Das führt zu den k-Abhängigkeiten
-
-\begin{equation}
-  u_s(k) = 0
-\end{equation}
-für gerade k's und
+\begin{align}
+  f_s(t) & = t, & -\pi \leq t < \pi
+\end{align}
+Daraus ergeben sich die k-Abhängigkeiten
 
 \begin{equation}
   u_s(k) = \frac{1}{k}
 \end{equation}
-für ungerade k's.
+für gerade und ungerade k's.
 
 \subsubsection{Dreieckspannung}
 
@@ -86,29 +58,19 @@ Eine Dreieckspannung wird beschrieben durch
 \begin{equation}
   f_d(t) =
   \begin{cases}
-    \pi + t, & -\pi \geq t < 0 \\
-    \pi - t, & 0 \leq t > \pi
+    \frac{\pi}{2} + t, & -\pi \geq t < 0 \\
+    \frac{\pi}{2} - t, & 0 \leq t > \pi
   \end{cases}.
 \end{equation}
-Daraus ergibt sich
+Daraus ergibt sich die k-Abhängigkeiten
 
 \begin{equation}
-  a_{k,d} =
-\end{equation}
-und
-
-\begin{equation}
-  b_{k,d} =
-\end{equation}
-Das führt zu den k-Abhängigkeiten
-
-\begin{equation}
-  u_d(k) =
+  u_d(k) = 0
 \end{equation}
 für gerade k's und
 
 \begin{equation}
-  u_d(k) =
+  u_d(k) = \frac{1}{k^2}
 \end{equation}
 für ungerade k's.
 
@@ -119,7 +81,7 @@ für ungerade k's.
 
 Für die Fourieranalyse wird ein Funktionsgenerator mit einem Oszilloskop
 in Reihe geschaltet. Das Oszilloskop wird so eingestellt, dass das
-Frequenzspektrum der benutzen Schwingung anzeigt.
+Frequenzspektrum der benutzen Schwingung angezeigt wird.
 Am Funktionsgenerator sollte eine möglichst hohe Grundfrequenz eingestellt
 werden, damit die Abweichungen gering bleiben.
 
