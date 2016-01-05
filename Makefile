@@ -14,8 +14,15 @@ all: build/main.pdf
 build/plotsprecht.pdf: plotsprecht.py matplotlibrc header-matplotlib.tex | build
 	TEXINPUTS="$(call translate,$(pwd):)" python plotsprecht.py
 
+build/plotspdrei.pdf: plotspdrei.py matplotlibrc header-matplotlib.tex | build
+	TEXINPUTS="$(call translate,$(pwd):)" python plotspdrei.py
+
+build/plotspsaeg.pdf: plotspsaeg.py matplotlibrc header-matplotlib.tex | build
+	TEXINPUTS="$(call translate,$(pwd):)" python plotspsaeg.py
+
 # hier weitere Abhängigkeiten für build/main.pdf deklarieren:
-build/main.pdf: build/plotsprecht.pdf
+build/main.pdf: build/plotsprecht.pdf build/plotspdrei.pdf build/plotspsaeg.pdf lit.bib content/
+
 
 build/main.pdf: FORCE | build
 	  TEXINPUTS="$(call translate,build:)" \
