@@ -10,7 +10,7 @@ Periode angegeben. Es gilt dann
 \begin{equation}
   f(x) = f(x+2\pi n).
 \end{equation}
-Über die Formeln \eqref{eqn:anbn} werden
+Über die Formeln \eqref{eqn:an} und \eqref{eqn:bn} werden
 die Koeffizienten der jeweiligen Fourierreihe und ihre gesuchte
 k-Anhängigkeit bestimmt.
 
@@ -82,8 +82,12 @@ für ungerade k's.
 Für die Fourieranalyse wird ein Funktionsgenerator mit einem Oszilloskop
 in Reihe geschaltet. Das Oszilloskop wird so eingestellt, dass das
 Frequenzspektrum der benutzen Schwingung angezeigt wird.
-Am Funktionsgenerator sollte eine möglichst hohe Grundfrequenz eingestellt
-werden, damit die Abweichungen gering bleiben.
+Das Abtasttheorem besagt, dass die Abweichungen bei der Fouriertransformation
+gering bleiben, wenn die Abtastfrequenz mindestens doppelt so groß wie die
+maximale Frequenz ist.
+Am Funktionsgenerator sollte daher eine möglichst hohe Abtastfrequenz
+eingestellt werden.
+
 
 \subsubsection{Fouriersynthese}
 \label{sec:AufbauS}
@@ -121,7 +125,7 @@ aufgenommen. Dabei wird wie folgt vorgegangen:
 \begin{itemize}
 
   \item Zunächst wird die in \ref{sec:AufbauS} beschriebene Schaltung zur
-  Einstellung der Amplitude augebaut.
+  Einstellung der Amplitude aufgebaut.
 
   \item Es wird am ersten Anschluss die maximale Amplitude eingestellt und
   abgelesen. Aus dem Messwert werden über die jeweilige k-Abhängigkeit aus
@@ -138,6 +142,10 @@ aufgenommen. Dabei wird wie folgt vorgegangen:
   Die Phasenverschiebung wird so verändert, dass bei ungeraden k's eine
   Lissajousfigur, die keine Fläche einschließt, und bei geraden k's
   eine Lissajousfigur, die symmetrisch zur x-Achse ist, erkennbar ist.
+  Bei den gerade k's werden zusätzlich Schalter für eine
+  Phasenverschiebung von $\SI{90}{\degree}$, $\SI{180}{\degree}$ oder
+  $\SI{270}{\degree}$
+  umgelegt, bis am Oszilloskop ein optimales Ergebnis erkennbar ist.
 
   \item Zuletzt wird das Oszilloskop zurückgesetzt und alle Anschlüsse
   eingeschaltet, sodass die jeweilige zu erzeugende Schwingung auf dem

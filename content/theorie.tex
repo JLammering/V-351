@@ -5,8 +5,8 @@ Einige periodische Vorgänge in Raum und Zeit lassen sich durch
 zusammengesetzte Sinus- und Cosinusfunktionen der Form
 
 \begin{align}
-  g(t) & = A\sin \frac{2\symup{\pi}}{T}t & h(t) & =
-  A\cos \frac{2\symup{\pi}}{T}t \\
+  g(t) & = A\sin \Bigl(\frac{2\symup{\pi}}{T}t\Bigr) & h(t) & =
+  A\cos \Bigl(\frac{2\symup{\pi}}{T}t\Bigr) \\
 \end{align}
 mit der Amplitude $A$ und der Periodendauer $T$ darstellen. Im Folgenden
 wird das Fouriersche Theorem vorgestellt, mit welchem man solche Funktionen
@@ -17,21 +17,23 @@ zusammensetzen kann.
 Eine gleichmäßig konvergente Reihe der Form
 
 \begin{equation}
-  \frac{a_0}{2} + \sum_{n=1}^{\infty} \Bigl(a_n \cos
+  f(t) = \frac{a_0}{2} + \sum_{n=1}^{\infty} \Bigl(a_n \cos
   \Bigl(n\frac{2\symup{\pi}}{T}t\Bigr)
   + b_n \sin \Bigl(n\frac{2\symup{\pi}}{T}t\Bigr)\Bigr)
 \end{equation}
 stellt eine periodische Funktion $f(t)$ dar.
 Diese sogenannte Fourierreihe besitzt die Koeffizienten
 
-\begin{align}
-  a_n & = \frac{2}{T}
-  \int_{0}^{T} f(t) \cos (n\frac{2\symup{\pi}}{T}t) \symup{d}t
-  \\
-  b_n & = \frac{2}{T}
-  \int_{0}^{T} f(t) \sin (n\frac{2\symup{\pi}}{T}t) \symup{d}t,
-  \label{eqn:anbn}
-\end{align}
+\begin{equation}
+  a_n = \frac{2}{T}
+  \int_{0}^{T} f(t) \cos \Bigl(n\frac{2\symup{\pi}}{T}t\Bigr) \symup{d}t
+  \label{eqn:an}
+\end{equation}
+\begin{equation}
+  b_n = \frac{2}{T}
+  \int_{0}^{T} f(t) \sin \Bigl(n\frac{2\symup{\pi}}{T}t\Bigr) \symup{d}t,
+  \label{eqn:bn}
+\end{equation}
 die jeweils für $n \to \infty$ gegen null gehen müssen, damit die Reihe
 konvergiert. Diese Koeffizienten können auch gleich Null sein.
 Für eine achsensymmetrische Funktion $f(t)$ beispielsweise sind alle $b_n$ null,
@@ -52,8 +54,12 @@ so entsteht ein Linienspektrum wie in Abbildung \ref{fig:Linienspektrum}.
 
 Bei dem folgenden Versuch wird die Fouriersumme bis zu einem endlichen
 $n$ betrachtet. Dabei tritt eine endliche Abweichung zwischen der Stelle $t_0$
-der Reihe und $f(t_0)$ auf. Diese Erscheinung wird als Gibbsches Phänomen
-bezeichnet.
+der Reihe und $f(t_0)$ auf. Das Linienspektrum besteht nicht aus
+zusammengesetzten $\delta$-Funktionen, sondern aus stetigen und
+differenzierbaren Funktionen mit Peaks, die eine endliche Breite besitzen.
+Dadurch enstehen auch kleine Nebenmaxima zwischen den ursprünglichen
+$\delta$-Funktionen.
+Diese Erscheinung wird als Gibbsches Phänomen bezeichnet.
 
 \subsection{Die Fouriertransformation}
 
